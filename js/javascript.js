@@ -339,6 +339,22 @@ $(function(){
         $(".helpWrap,.helpInner ul").removeClass("display");
         $(".helpInner,.helpInner .q6").addClass("display");
     })
+    
+    $(".helpBody li:eq(6)").click(function(){
+        $("header .helpPage").removeClass("display");
+        $("header .helpPage.q7").addClass("display");
+
+        $(".helpWrap,.helpInner ul").removeClass("display");
+        $(".helpInner,.helpInner .q7").addClass("display");
+    })
+
+    $(".helpBody li:eq(7)").click(function(){
+        $("header .helpPage").removeClass("display");
+        $("header .helpPage.q8").addClass("display");
+
+        $(".helpWrap,.helpInner ul").removeClass("display");
+        $(".helpInner,.helpInner .q8").addClass("display");
+    })
 })
 
 //eventApply
@@ -349,10 +365,14 @@ $(function(){
     })
 
     $(".eventApplyType li:eq(0)").click(function(){
-        $(".applyList").addClass("display");
-        $(".applyRecord").removeClass("display");
+        $(".applyRecord,.applyList").removeClass("display");
+        $(".applyList.choose").addClass("display");
     })
     $(".eventApplyType li:eq(1)").click(function(){
+        $(".applyRecord,.applyList").removeClass("display");
+        $(".applyList.already").addClass("display");
+    })
+    $(".eventApplyType li:eq(2)").click(function(){
         $(".applyList").removeClass("display");
         $(".applyRecord").addClass("display");
     })
@@ -464,12 +484,25 @@ $(function(){
     })
 
     $(".depList li:eq(0)").click(function(){
+        $(".depContent").removeClass("display");
         $(".depContent.card").addClass("display");
-        $(".depContent.card").siblings().removeClass("display");
     })
     $(".depList li:eq(1)").click(function(){
+        $(".depContent").removeClass("display");
         $(".depContent.atm").addClass("display");
-        $(".depContent.atm").siblings().removeClass("display");
+    })
+    $(".depList li:eq(2)").click(function(){
+        $(".depContent").removeClass("display");
+        $(".depContent.shop").addClass("display");
+    })
+
+    $(".depContent.card .check").click(function(){
+        $(".depList,.depContent").removeClass("display");
+        $(".depContent.already").addClass("display");
+    })
+    $(".depContent.already .change").click(function(){
+        $(".depContent").removeClass("display");
+        $(".depList,.depContent.card").addClass("display");
     })
 })
 

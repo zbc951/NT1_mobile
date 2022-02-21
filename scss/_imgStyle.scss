@@ -188,6 +188,10 @@ header .refresh_ic {
     background: url('../images/icon/svg/entire.svg') no-repeat;
     background-size: 100%;
 }
+.eventType li.active .all_ic {
+    background: url('../images/icon/svg/entire2.svg') no-repeat;
+    background-size: 100%;
+}
 
 //wallet .amount ic
 .walletWrap .amount .title .icon {
@@ -394,6 +398,10 @@ header .refresh_ic {
     background: url('../images/說明圖/remote.png') no-repeat;
     background-size: 100%;
 }
+.helpInner .img.license {
+    background: url('../images/說明圖/license.jpg') no-repeat;
+    background-size: 100%;
+}
 
 //member_info
 .memberInfo .info_2 .check {
@@ -455,6 +463,10 @@ header .editBtn {
     background-size: contain;
 }
 .depositWrap .atm_ic {
+    background: url('../images/icon/svg/atm.svg') no-repeat center;
+    background-size: contain;
+}
+.depositWrap .shop_ic {
     background: url('../images/icon/svg/shop.svg') no-repeat center;
     background-size: contain;
 }
@@ -509,19 +521,28 @@ header .editBtn {
     background-size: contain;
 }
 
+//新增help客服頁ic
+.helpInner .btnBox .online_ic {
+    background: url('../images/icon/svg/service3.svg') no-repeat center;
+    background-size: contain;
+}
+.helpInner .btnBox .line_ic {
+    background: url('../images/icon/svg/line.svg') no-repeat center;
+    background-size: contain;
+}
+
 
 ////////img↓
 
 
 //header - logo
 header .logo {
-    width: 58px;
-    height: 26px;
+    width: 56px;
 }
 
 //ad - banner
 .single-item {
-    width: 97vw;
+    width: 100%;
     height: 43.73vw;
 
     img {

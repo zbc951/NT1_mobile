@@ -3,7 +3,7 @@
     width: 100%;
     height: auto;
     min-height: calc(100% - 92px);
-    background: $backgroundColor_4;
+    background: $mainBG_3;
     padding-bottom: 10px;
 
     //玩家資訊
@@ -11,7 +11,7 @@
         width: 100%;
         height: auto;
         margin-bottom: 10px;
-        background: $backgroundColor_2;
+        background: $mainBG_2;
         padding-bottom: 13px;
 
         .info {
@@ -19,7 +19,7 @@
             align-items: center;
             justify-content: space-between;
             position: relative;
-            padding: 15px 15px 10px;
+            padding: 20px 15px;
             box-sizing: border-box;
             width: 100%;
             height: auto;
@@ -32,23 +32,14 @@
                     margin-bottom: 6px;
                     font-size: 16px;
                     letter-spacing: 2px;
-                    color: $font-color_12;
+                    color: $mainWord_1;
                     font-weight: bold;
 
                     .lv {
-                        min-width: 50px;
                         width: auto;
                         height: 18px;
-                        padding: 0 5px;
                         margin-right: 9px;
-                        border-radius: 1vw;
-                        background: $backgroundColor_6;
-                        font-size: 14px;
-                        letter-spacing: 1px;
-                        font-weight: bold;
-                        color: $font-color_5;
-                        display: flex;
-                        align-items: center;
+                        @include operateLV
                     }
                 }
 
@@ -56,15 +47,23 @@
                     font-size: 13px;
                     letter-spacing: 1px;
                     font-weight: bold;
-                    color: $font-color_1;
+                    color: $title_Time;
                 }
             }
 
-            .arrow_ic {
-                display: block;
-                width: 1.7vw;
-                height: 3.2vw;
-                transform: scaleX(-1);
+            // .arrow_ic {
+            //     display: block;
+            //     width: 1.7vw;
+            //     height: 3.2vw;
+            //     transform: scaleX(-1);
+            // }
+
+            .infoBtn {
+                width: auto;
+                height: auto;
+                @include mainBtn;
+                font-size: 14px;
+                padding: 3px 15px;
             }
         }
 
@@ -74,27 +73,15 @@
             margin-bottom: 12px;
 
             p {
-                display: flex;
-                align-items: center;
                 width: 64.53vw;
                 height: 8.27vw;
-                box-sizing: border-box;
-                padding-left: 16px;
-                background: $backgroundColor_4;
-                border-style: solid;
-                border-width: 1px 0 1px 1px;
-                border-color: $borderColor_5;
-                border-radius: 5vw 0 0 5vw;
-                font-size: 15px;
-                letter-spacing: 1px;
-                color: $font-color_4;
-                font-weight: bold;
+                @include memberWallet
             }
 
             button {
                 width: 27.73vw;
                 height: 8.27vw;
-                @include buttonStyle_2;
+                @include mainBtn;
                 border-radius: 0 5vw 5vw 0;
                 font-size: 15px;
             }
@@ -108,9 +95,9 @@
             justify-content: space-between;
 
             button {
-                width: 45.07vw;
+                width: 100%;
                 height: 18.4vw;
-                @include buttonStyle_7;
+                @include normalBtn;
 
                 .wallet_ic {
                     display: block;
@@ -118,23 +105,23 @@
                     height: 8.8vw;
                 }
 
-                .vip_ic {
-                    display: block;
-                    width: 10vw;
-                    height: 10vw;
-                }
+                // .vip_ic {
+                //     display: block;
+                //     width: 10vw;
+                //     height: 10vw;
+                // }
 
                 .text {
                     margin-left: 3.47vw;
                     font-size: 18px;
                     font-weight: bold;
                     letter-spacing: 2px;
-                    color: $font-color_8;
+                    color: $title_2;
 
                     p {
                         font-size: 12px;
                         letter-spacing: 1px;
-                        color: $font-color_1;
+                        color: $title_3;
                         text-align: left;
                     }
                 }
@@ -167,26 +154,15 @@
                     font-weight: bold;
                     letter-spacing: 1px;
                     margin-top: 5px;
-                    color: $font-color_12;
+                    color: $optionColor;
                 }
 
                 .bubble {
-                    position: absolute;
-                    width: auto;
-                    height: auto;
                     min-width: 20px;
                     min-height: 20px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 12px;
-                    padding: 0 2px 2px;
                     top: -7px;
                     right: 10px;
-                    border-radius: 50%;
-                    color: $font-color_5;
-                    background: $backgroundColor_6;
-                    box-sizing: border-box;
+                    @include mailBubble;
                 }
             }
         }
@@ -201,7 +177,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background: $backgroundColor_2;
+        background: $mainBG_2;
         margin-bottom: 10px;
 
         &.opLang {
@@ -230,7 +206,7 @@
                 font-size: 15px;
                 letter-spacing: 2px;
                 font-weight: bold;
-                color: $font-color_8;
+                color: $optionColor;
             }
         }
 
@@ -245,7 +221,7 @@
 
 //會員中心內頁滑軸
 .memberList {
-    background: $backgroundColor_2;
+    background: $mainBG_2;
     width: 100%;
     height: auto;
 
@@ -264,11 +240,11 @@
             border-bottom: solid 2px transparent;
             font-size: 3.4vw;
             font-weight: bold;
-            color: $font-color_2;
+            color: $choose_Word;
 
             &:active,&.active {
-                color: $font-color_12;
-                border-color: $borderColor_3;
+                color: $choose_ActiveWord;
+                border-color: $choose_Border;
             }
         }
     }
@@ -281,7 +257,7 @@
     height: calc(100vh - 136px);
     padding: 10px 0;
     box-sizing: border-box;
-    background: $backgroundColor_4;
+    background: $mainBG_3;
 
     form {
         width: 100%;
@@ -290,7 +266,7 @@
         ul {
             width: 100%;
             height: auto;
-            background: $backgroundColor_2;
+            background: $mainBG_2;
             padding-bottom: 12px;
 
             li {
@@ -302,7 +278,7 @@
                 justify-content: space-between;
                 box-sizing: border-box;
                 padding: 0 17px;
-                border-bottom: solid 1px $borderColor_1;
+                border-bottom: solid 1px $mainBorder_1;
 
                 &.active {
                     height: 103px;
@@ -314,10 +290,11 @@
 
                 em {
                     position: relative;
+                    top: -1px;
 
                     &::before {
                         content: "※ ";
-                        color: $font-color_3;
+                        color: $remind;
                         padding: 0 5px 0 0;
                         font-size: 14px;
                     }
@@ -327,18 +304,18 @@
                     width: 20vw;
                     font-weight: bold;
                     font-size: 14px;
-                    color: $font-color_8;
+                    color: $title_2;
                 }
 
                 input {
                     width: 64vw;
                     height: 42px;
-                    @include inputStyle_3;
+                    @include memberInput;
                 }
 
                 button {
                     display: none;
-                    @include buttonStyle_2;
+                    @include mainBtn;
                     width: 100%;
                     height: 42px;
                     margin-bottom: 2px;
@@ -350,7 +327,7 @@
                 width: 92vw;
                 height: 42px;
                 margin: 12px auto 0;
-                @include buttonStyle_2;
+                @include mainBtn;
             }
         }
     }
@@ -375,7 +352,7 @@
         ul {
             width: 100%;
             height: auto;
-            background: $backgroundColor_2;
+            background: $mainBG_2;
             
             li {
                 width: 100%;
@@ -385,15 +362,15 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                border-bottom: solid 1px $borderColor_1;
+                border-bottom: solid 1px $mainBorder_1;
 
                 span {
                     font-size: 14px;
                     font-weight: bold;
-                    color: $font-color_14;
+                    color: $title_2;
 
                     &.empty {
-                        color: $font-color_3;
+                        color: $remind;
                     }
 
                     &:nth-of-type(1) {
@@ -408,7 +385,7 @@
                     .copy {
                         width: 47px;
                         height: 29px;
-                        @include buttonStyle_3;
+                        @include noBgBtn_Normal;
                         margin-left: 15px;
                     }
 
@@ -425,7 +402,7 @@
                         align-items: center;
                         font-size: 14px;
                         font-weight: bold;
-                        color: $font-color_14;
+                        color: $optionColor;
                         margin-left: 10px;
 
                         i {
@@ -441,31 +418,10 @@
                 .security {
                     width: 100%;
                     height: 40px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    background: $backgroundColor_8;
-                    border: solid 1px $borderColor_5;
-                    box-sizing: border-box;
-                    padding: 0 20px;
-                    border-radius: 5px;
-                    font-size: 14px;
-                    font-weight: bold;
+                    @include security;
 
                     span {
                         margin-left: 5px;
-
-                        &.low {
-                            color: $font-color_9;
-                        }
-
-                        &.middle {
-                            color: $font-color_11;
-                        }
-
-                        &.high {
-                            color: $font-color_10;
-                        }
                     }
                 }
             }
@@ -480,24 +436,24 @@
     height: calc(100vh - 136px);
     padding: 10px 4vw;
     box-sizing: border-box;
-    background: $backgroundColor_4;
+    background: $mainBG_3;
 
     .platformBox {
         width: 100%;
         height: auto;
         box-sizing: border-box;
-        border: solid 1px $borderColor_1;
+        border: solid 1px $mainBorder_1;
         border-radius: 5px;
-        background: $backgroundColor_2;
+        background: $mainBG_2;
         margin-bottom: 10px;
 
         .title {
             width: 100%;
             height: 38px;
-            border-bottom: solid 1px $borderColor_3;
+            border-bottom: solid 1px $mainBorder_2;
             box-sizing: border-box;
             padding: 0 17px;
-            color: $font-color_8;
+            color: $title_1;
             font-size: 14px;
             font-weight: bold;
             display: flex;
@@ -518,19 +474,20 @@
                 justify-content: space-between;
 
                 p {
-                    color: $font-color_8;
+                    color: $title_2;
                     font-size: 14px;
                     font-weight: bold;
 
                     span {
                         font-size: 13px;
+                        color: $mainWord_1;
                     }
 
                     button {
                         width: 49px;
                         height: 28px;
                         margin-left: 10px;
-                        @include buttonStyle_3;
+                        @include noBgBtn_Normal;
 
                         &.un {
                             opacity: 0;

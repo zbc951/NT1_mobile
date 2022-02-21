@@ -3,7 +3,7 @@
     width: 100%;
     min-height: calc(100vh - 92px);
     height: auto;
-    background: $backgroundColor_4;
+    background: $mainBG_3;
     padding-bottom: 10px;
 
     //上半
@@ -12,11 +12,11 @@
         height: auto;
         padding-bottom: 15px;
         margin-bottom: 10px;
-        background: $backgroundColor_2;
+        background: $mainBG_2;
 
         //漸層
         .gradient {
-            background: $linear_4;
+            background: $wallet_BG;
             width: 100%;
             height: auto;
 
@@ -24,15 +24,15 @@
                 width: 92vw;
                 height: auto;
                 margin: 0 auto 16px;
-                background: $backgroundColor_2;
+                background: $mainBG_2;
                 border-radius: 1.5vw;
-                box-shadow: 0 0 5px 0 $boxshadow_2;
+                box-shadow: 0 10px 12px -2px $boxshadow_2;
 
                 .amount {
                     width: 100%;
                     height: auto;
                     display: flex;
-                    border-bottom: solid 1px $borderColor_1;
+                    border-bottom: solid 1px $mainBorder_1;
 
                     .half {
                         width: 50%;
@@ -44,24 +44,24 @@
                             display: flex;
                             align-items: center;
                             margin-bottom: 10px;
-                            color: $font-color_8;
+                            color: $title_2;
                             font-size: 15px;
                             font-weight: bold;
                             letter-spacing: 2px;
                             
-                            &.all {
-                                color: $font-color_10;
-                            }
+                            // &.all {
+                            //     color: $font-color_10;
+                            // }
 
-                            .icon {
-                                width: 4.27vw;
-                                height: 4.27vw;
-                                margin-left: 6px;
-                            }
+                            // .icon {
+                            //     width: 4.27vw;
+                            //     height: 4.27vw;
+                            //     margin-left: 6px;
+                            // }
                         }
 
                         .money {
-                            color: $font-color_12;
+                            color: $money;
                             font-size: 25px;
                             font-weight: bold;
                             display: flex;
@@ -76,16 +76,16 @@
                     width: 100%;
                     height: auto;
                     display: flex;
-                    border-bottom: solid 1px $borderColor_1;
+                    border-bottom: solid 1px $mainBorder_1;
                     
                     .items {
                         display: flex;
-                        width: 50%;
+                        width: 100%;
                         align-items: center;
                         box-sizing: border-box;
-                        padding: 0 6px;
+                        padding: 0 15px;
                         height: 10.67vw;
-                        border-right: solid 1px $borderColor_1;
+                        // border-right: solid 1px $borderColor_1;
 
                         &:nth-of-type(2) {
                             border: none;
@@ -94,31 +94,32 @@
                         p {
                             font-size: 15px;
                             font-weight: bold;
-                            color: $font-color_14;
+                            color: $title_2;
                             white-space: nowrap;
 
                             &:nth-of-type(1) {
-                                width: 40%;
-                                font-size: 14px;
+                                // width: 40%;
+                                font-size: 12px;
                                 text-align: center;
                             }
 
                             &:nth-of-type(2) {
-                                width: 60%;
+                                // width: 60%;
                                 text-align: right;
                                 box-sizing: border-box;
-                                padding: 0 5px;
+                                padding: 0 10px;
+                                color: $money_Sp;
                             }
 
-                            &.mainWallet {
-                                color: $font-color_3;
-                            }
-                            &.limit {
-                                color: $font-color_8;
-                            }
-                            &.activeWallet {
-                                color: $font-color_11;
-                            }
+                            // &.mainWallet {
+                            //     color: $font-color_3;
+                            // }
+                            // &.limit {
+                            //     color: $font-color_8;
+                            // }
+                            // &.activeWallet {
+                            //     color: $font-color_11;
+                            // }
                         }
                     }
                 }
@@ -147,8 +148,9 @@
 
                 p {
                     font-size: 13px;
+                    font-weight: bold;
                     letter-spacing: 1px;
-                    color: $font-color_8;
+                    color: $optionColor;
                     padding-top: 6px;
                 }
             }
@@ -156,149 +158,149 @@
     }
 
     //按鈕列
-    .btnBox {
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        padding: 0 5px 10px;
+    // .btnBox {
+    //     width: 100%;
+    //     height: auto;
+    //     box-sizing: border-box;
+    //     display: flex;
+    //     justify-content: center;
+    //     padding: 0 5px 10px;
 
-        button {
-            width: 46.4vw;
-            height: 10.67vw;
-            @include buttonStyle_6;
+    //     button {
+    //         width: 46.4vw;
+    //         height: 10.67vw;
+    //         @include buttonStyle_6;
 
-            &:nth-of-type(1) {
-                border-radius: 1.5vw 0 0 1.5vw;
-            }
-            &:last-child {
-                border-radius: 0 1.5vw 1.5vw 0;
-            }
-        }
-    }
+    //         &:nth-of-type(1) {
+    //             border-radius: 1.5vw 0 0 1.5vw;
+    //         }
+    //         &:last-child {
+    //             border-radius: 0 1.5vw 1.5vw 0;
+    //         }
+    //     }
+    // }
 
     //錢包列
     .walletList {
         width: 100%;
         height: auto;
-        background: $backgroundColor_2;
+        background: $mainBG_2;
 
-        .forActive,
-        .forHistory {
-            padding-bottom: 15px;
-            display: none;
+        // .forActive,
+        // .forHistory {
+        //     padding-bottom: 15px;
+        //     display: none;
 
-            &.display {
-                display: block;
-            }
+        //     &.display {
+        //         display: block;
+        //     }
 
-            .title {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-                height: auto;
-                box-sizing: border-box;
-                padding: 8px 15px 0;
-                margin-bottom: 11px;
-                font-size: 13px;
-                letter-spacing: 1px;
-                color: $font-color_4;
-                font-weight: bold;
+        //     .title {
+        //         display: flex;
+        //         align-items: center;
+        //         justify-content: space-between;
+        //         width: 100%;
+        //         height: auto;
+        //         box-sizing: border-box;
+        //         padding: 8px 15px 0;
+        //         margin-bottom: 11px;
+        //         font-size: 13px;
+        //         letter-spacing: 1px;
+        //         color: $font-color_4;
+        //         font-weight: bold;
 
-                .refresh_ic {
-                    display: block;
-                    width: 18px;
-                    height: 18px;
-                }
-            }
+        //         .refresh_ic {
+        //             display: block;
+        //             width: 18px;
+        //             height: 18px;
+        //         }
+        //     }
 
-            .pointBox {
-                width: 92.27vw;
-                height: auto;
-                padding-bottom: 30px;
-                margin: 0 auto 14px;
-                background: $backgroundColor_2;
-                box-shadow: 0 0 5px 0 $boxshadow_2;
+        //     .pointBox {
+        //         width: 92.27vw;
+        //         height: auto;
+        //         padding-bottom: 30px;
+        //         margin: 0 auto 14px;
+        //         background: $backgroundColor_2;
+        //         box-shadow: 0 0 5px 0 $boxshadow_2;
 
-                .smallTitle {
-                    display: flex;
-                    align-items: center;
-                    box-sizing: border-box;
-                    height: 40px;
-                    border-bottom: solid 1px $borderColor_3;
-                    font-size: 14px;
-                    font-weight: bold;
-                    color: $font-color_12;
-                    padding: 0 17px;
-                }
+        //         .smallTitle {
+        //             display: flex;
+        //             align-items: center;
+        //             box-sizing: border-box;
+        //             height: 40px;
+        //             border-bottom: solid 1px $borderColor_3;
+        //             font-size: 14px;
+        //             font-weight: bold;
+        //             color: $font-color_12;
+        //             padding: 0 17px;
+        //         }
 
-                .barBox {
-                    width: 88vw;
-                    height: auto;
-                    box-sizing: border-box;
-                    padding: 10px 20px 15px;
-                    background: $backgroundColor_8;
-                    border-radius: 3px;
-                    margin: 10px auto 0;
-                    display: flex;
-                    flex-direction: column;
+        //         .barBox {
+        //             width: 88vw;
+        //             height: auto;
+        //             box-sizing: border-box;
+        //             padding: 10px 20px 15px;
+        //             background: $backgroundColor_8;
+        //             border-radius: 3px;
+        //             margin: 10px auto 0;
+        //             display: flex;
+        //             flex-direction: column;
 
-                    .not {
-                        font-size: 12px;
-                        font-weight: bold;
-                        letter-spacing: 1px;
-                        color: $font-color_2;
-                    }
-                }
+        //             .not {
+        //                 font-size: 12px;
+        //                 font-weight: bold;
+        //                 letter-spacing: 1px;
+        //                 color: $font-color_2;
+        //             }
+        //         }
 
-                ul {
-                    width: 100%;
-                    height: auto;
+        //         ul {
+        //             width: 100%;
+        //             height: auto;
 
-                    li {
-                        width: 100%;
-                        height: auto;
-                        box-sizing: border-box;
-                        padding: 12px 0 0 16px;
-                        display: flex;
+        //             li {
+        //                 width: 100%;
+        //                 height: auto;
+        //                 box-sizing: border-box;
+        //                 padding: 12px 0 0 16px;
+        //                 display: flex;
                         
-                        p {
-                            font-size: 13px;
-                            letter-spacing: 1px;
-                            color: $font-color_8;
-                            font-weight: bold;
+        //                 p {
+        //                     font-size: 13px;
+        //                     letter-spacing: 1px;
+        //                     color: $font-color_8;
+        //                     font-weight: bold;
 
-                            &:nth-of-type(1) {
-                                margin-right: 20px;
-                            }
-                        }
-                    }
-                }
+        //                     &:nth-of-type(1) {
+        //                         margin-right: 20px;
+        //                     }
+        //                 }
+        //             }
+        //         }
 
-                .pointBtnBox {
-                    display: flex;
-                    justify-content: space-between;
-                    box-sizing: border-box;
-                    width: 100%;
-                    height: auto;
-                    padding: 20px 14px 10px;
+        //         .pointBtnBox {
+        //             display: flex;
+        //             justify-content: space-between;
+        //             box-sizing: border-box;
+        //             width: 100%;
+        //             height: auto;
+        //             padding: 20px 14px 10px;
 
-                    button {
-                        width: 41.33vw;
-                        height: 8.27vw;
-                        @include buttonStyle_2;
-                        font-size: 13px;
+        //             button {
+        //                 width: 41.33vw;
+        //                 height: 8.27vw;
+        //                 @include buttonStyle_2;
+        //                 font-size: 13px;
                         
-                        &.check {
-                            @include buttonStyle_3;
-                            font-size: 13px;
-                        }
-                    }
-                }
-            }
-        }
+        //                 &.check {
+        //                     @include buttonStyle_3;
+        //                     font-size: 13px;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
 
         .forPlatform {
             padding-bottom: 15px;
@@ -319,13 +321,13 @@
                 margin-bottom: 11px;
                 font-size: 13px;
                 letter-spacing: 1px;
-                color: $font-color_4;
+                color: $title_Time;
                 font-weight: bold;
 
                 button {
                     width: 18.93vw;
                     height: 6.13vw;
-                    @include buttonStyle_2;
+                    @include mainBtn;
                     font-size: 12px;
                 }
             }
@@ -349,8 +351,8 @@
                     box-sizing: border-box;
                     padding: 10px 0 0 11px;
                     margin: 0 0.26vw 0.26vw 0;
-                    border: solid 1px $borderColor_1;
-                    border-radius: 1.5vw;
+                    border: solid 1px $mainBorder_1;
+                    border-radius: 5px;
 
                     &:nth-of-type(3n) {
                         margin-right: 0;
@@ -359,7 +361,7 @@
                     div {
                         font-size: 12px;
                         letter-spacing: 1px;
-                        color: $font-color_8;
+                        color: $title_2;
                         font-weight: bold;
                         display: flex;
                         align-items: center;
@@ -389,28 +391,11 @@
                                 display: none;
                                 width: auto;
                                 height: auto;
-                                padding: 6px 18px;
-                                color: $font-color_5;
-                                background: $backgroundColor_6;
-                                border-radius: 3px;
                                 position: absolute;
                                 left: 50%;
                                 transform: translateX(-50%);
                                 bottom: -30px;
-                                white-space: nowrap;
-
-                                &::before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 50%;
-                                    transform: translateX(-50%);
-                                    top: -6px;
-                                    width: 0;
-                                    height: 0;
-                                    border-style: solid;
-                                    border-width: 0 4px 6px 4px;
-                                    border-color: $backgroundColor_6 transparent;
-                                }
+                                @include walletInner;
                             }
                         }
                     }
@@ -418,7 +403,7 @@
                     p {
                         margin-top: 10px;
                         font-size: 17px;
-                        color: $font-color_12;
+                        color: $money;
                         font-weight: bold;
                     }
                 }
@@ -435,7 +420,7 @@
                     font-size: 13px;
                     letter-spacing: 1px;
                     font-weight: bold;
-                    color: $font-color_12;
+                    color: $optionColor;
                     display: flex;
                     align-items: center;
 

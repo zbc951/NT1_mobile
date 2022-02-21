@@ -3,11 +3,7 @@
     width: 100%;
     height: auto;
     overflow-x: auto;
-    position: fixed;
-    top: 45px;
-    left: 0px;
-    z-index: 10;
-    background: $backgroundColor_2;
+    background: $mainBG_2;
 
     ul {
         display: flex;
@@ -23,10 +19,10 @@
             border-bottom: solid 2px transparent;
 
             &:active,&.active {
-                border-color: $borderColor_3;
+                border-color: $choose_Border;
 
                 span {
-                    color: $font-color_12;
+                    color: $choose_ActiveWord;
                 }
             }
 
@@ -39,7 +35,7 @@
             span {
                 font-size: 12px;
                 font-weight: bold;
-                color: $font-color_2;
+                color: $choose_Word;
             }
         }
     }
@@ -48,12 +44,11 @@
 //優惠列表
 .eventList {
     width: 100%;
-    height: calc(100vh - 92px);
-    margin-top: 72px;
+    height: calc(100vh - 168px);
     overflow-y: auto;
     box-sizing: border-box;
     padding: 10px 14px 0;
-    background: $backgroundColor_4;
+    background: $mainBG_3;
 
     ul {
         display: flex;
@@ -67,13 +62,13 @@
             .eventBox {
                 width: 100%;
                 height: auto;
-                background: $backgroundColor_2;
+                background: $mainBG_2;
                 border-radius: 1.5vw;
                 overflow: hidden;
                 box-shadow: 0 0 13px 5px $boxshadow_1;
 
                 .eventImg {
-                    background: $backgroundColor_4;
+                    background: $mainBG_3;
                 }
 
                 p {
@@ -88,7 +83,7 @@
                     button {
                         width: 95px;
                         height: 27px;
-                        @include buttonStyle_5;
+                        @include checkEvent;
                     }
                 }
             }
@@ -99,11 +94,12 @@
 //優惠內頁
 .eventDetail {
     width: 100%;
-    height: auto;
+    height: calc(100vh - 110px);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 15px;
+    background: $mainBG_3;
 
     .detailHeader,.detailContent {
         width: 94.13vw;
@@ -111,8 +107,8 @@
         box-sizing: border-box;
         padding: 10px 15px 15px;
         margin-top: 10px;
-        background: $backgroundColor_2;
-        border-radius: 1.5vw;
+        background: $mainBG_2;
+        border-radius: 5px;
         box-shadow: 0 0 5px 0 $boxshadow_2;
 
         ul {
@@ -126,19 +122,20 @@
                 font-size: 16px;
                 font-weight: bold;
                 margin-bottom: 10px;
-                color: $font-color_3;
+                color: $title_1;
             }
 
             .content {
                 display: flex;
 
                 div {
-                    color: $font-color_8;
+                    color: $mainWord_1;
                     font-weight: bold;
                     font-size: 14px;
 
                     &:nth-of-type(1) {
                         width: 20vw;
+                        color: $title_2;
                     }
 
                     &:nth-of-type(2) {
@@ -156,8 +153,8 @@
                 
                 p {
                     font-weight: bold;
-                    color: $font-color_12;
-                    font-style: 14px;
+                    color: $mainWord_1;
+                    font-size: 14px;
                     line-height: 20px;
                 }
             }

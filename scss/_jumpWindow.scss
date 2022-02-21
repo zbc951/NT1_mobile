@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: $backgroundColor_3;
+    background: $filter;
     align-items: center;
     justify-content: center;
     z-index: 999;
@@ -24,8 +24,8 @@
         font-size: 21px;
         letter-spacing: 2px;
         font-weight: bold;
-        color: $font-color_5;
-        background: $backgroundColor_1;
+        color: $title_Header;
+        background: $filter_TopBg;
         position: relative;
 
         i {
@@ -42,8 +42,8 @@
     .plsGo,.plsGo2 {
         width: 92%;
         height: auto;
-        background: $backgroundColor_2;
-        border-radius: 1.5vw;
+        background: $mainBG_2;
+        border-radius: 5px;
         overflow: hidden;
         display: none;
 
@@ -53,7 +53,7 @@
 
         .content {
             font-size: 14px;
-            color: $font-color_6;
+            color: $mainWord_1;
             letter-spacing: 1px;
             font-weight: bold;
             width: 100%;
@@ -76,7 +76,7 @@
             button {
                 width: 92%;
                 height: 40px;
-                @include buttonStyle_2;
+                @include mainBtn;
             }
         }
     }
@@ -85,8 +85,8 @@
     .loading {
         width: 92.27vw;
         height: auto;
-        background: $backgroundColor_2;
-        border-radius: 1.5vw;
+        background: $mainBG_2;
+        border-radius: 5px;
         overflow: hidden;
         display: none;
 
@@ -110,7 +110,7 @@
 
             p {
                 margin-top: 20px;
-                color: $font-color_1;
+                color: $mainWord_1;
                 font-weight: bold;
             }
 
@@ -131,8 +131,8 @@
         width: 87.2vw;
         height: auto;
         padding-bottom: 13vw;
-        background: $backgroundColor_2;
-        border-radius: 1.5vw;
+        background: $mainBG_2;
+        border-radius: 5px;
         overflow: hidden;
         display: none;
 
@@ -169,7 +169,7 @@
                 input {
                     width: 77.6vw;
                     height: 9.87vw;
-                    @include inputStyle_1;
+                    @include mainInput;
                 }
 
                 .eye {
@@ -192,7 +192,7 @@
                 p {
                     font-size: 12px;
                     font-weight: bold;
-                    color: $font-color_7;
+                    color: $click;
 
                     span {
                         margin: 0 2px;
@@ -205,12 +205,12 @@
                 width: 77.6vw;
                 height: 11.2vw;
                 margin: 8vw 0;
-                @include buttonStyle_2;
+                @include mainBtn;
             }
         }
 
         .registerBtn {
-            color: $font-color_8;
+            color: $title_2;
             letter-spacing: 1px;
             font-size: 14px;
             display: flex;
@@ -219,7 +219,7 @@
 
             p {
                 margin-left: 10px;
-                color: $font-color_7;
+                color: $click;
             }
         }
     }
@@ -228,7 +228,7 @@
     .forgetWindow {
         width: 92.27vw;
         height: auto;
-        background: $backgroundColor_2;
+        background: $mainBG_2;
         border-radius: 1.5vw;
         display: none;
         overflow: hidden;
@@ -249,14 +249,14 @@
                 width: 77.6vw;
                 height: 9.87vw;
                 margin-top: 19px;
-                @include inputStyle_1;
+                @include mainInput;
             }
 
             button {
                 width: 77.6vw;
                 height: 11.2vw;
                 margin-top: 15px;
-                @include buttonStyle_2;
+                @include mainBtn;
             }
 
             .remind {
@@ -265,7 +265,7 @@
                 margin: 15px 0;
                 font-size: 14px;
                 font-weight: bold;
-                color: $font-color_1;
+                color: $remind;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -278,7 +278,7 @@
         width: 87.2vw;
         height: auto;
         padding-bottom: 7.2vw;
-        background: $backgroundColor_2;
+        background: $mainBG_2;
         border-radius: 1.5vw;
         overflow: hidden;
         display: none;
@@ -312,7 +312,7 @@
                 input {
                     width: 77.33vw;
                     height: 9.6vw;
-                    @include inputStyle_1;
+                    @include mainInput;
                 }
 
                 &.hasRemind {
@@ -331,7 +331,7 @@
                     display: flex;
                     font-size: 14px;
                     font-weight: bold;
-                    color: $font-color_12;
+                    color: $title_2;
                     align-items: center;
 
                     input[type = checkbox]{
@@ -341,7 +341,7 @@
                     }
 
                     p {
-                        color: $font-color_13;
+                        color: $click;
                     }
                 }
 
@@ -361,11 +361,11 @@
                     top: 50%;
                     transform: translateY(-50%);
                     right: 10px;
-                    @include buttonStyle_3;
+                    @include noBgBtn_Normal;
                 }
 
                 .must {
-                    color: $font-color_9;
+                    color: $remind;
                     font-weight: bold;
                     font-size: 13px;
                 }
@@ -375,7 +375,7 @@
                 width: 77.33vw;
                 margin: 5px 0;
                 font-size: 12px;
-                color: $font-color_1;
+                color: $remind;
             }
 
             .choose {
@@ -385,39 +385,13 @@
                 left: 0;
                 top: 0;
                 z-index: 2;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    width: 2px;
-                    height: 5px;
-                    background: #939393;
-                    transform: rotate(45deg) translateY(-50%);
-                    top: 50%;
-                    right: 3vw;
-                    z-index: 2;
-                }
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    width: 2px;
-                    height: 5px;
-                    background: #939393;
-                    transform: rotate(-45deg) translateY(-50%);
-                    top: 50%;
-                    right: 3vw;
-                }
+                @include socialChoose;
 
                 li {
                     width: 100%;
                     height: 100%;
-                    position: relative;
-                    box-sizing: border-box;
-                    border: solid 1px $borderColor_4;
-                    background: $linear_2;
-                    border-radius: 1vw;
                     display: none;
+                    @include socialChoose_Option;
 
                     &.display {
                         display: block;
@@ -440,7 +414,7 @@
                 height: 9.6vw;
                 padding: 10px 0;
                 margin-bottom: 10px;
-                @include buttonStyle_2;
+                @include mainBtn;
             }
         }
     }
@@ -449,8 +423,8 @@
     .ruleWindow {
         width: 87.2vw;
         height: auto;
-        background: $backgroundColor_2;
-        border-radius: 1.5vw;
+        background: $mainBG_2;
+        border-radius: 5px;
         overflow: hidden;
         display: none;
 
@@ -472,7 +446,7 @@
                     padding: 10px 5px;
                     font-weight: bold;
                     line-height: 1.8;
-                    color: $font-color_14;
+                    color: $title_1;
                 }
 
                 p {
@@ -480,7 +454,7 @@
                     padding: 10px 5px;
                     line-height: 1.8;
                     font-weight: bold;
-                    color: $font-color_8;
+                    color: $mainWord_1;
                 }
 
                 ul {
@@ -493,6 +467,9 @@
 
                     li {
                         line-height: 1.8;
+                        font-size: 3.4vw;
+                        font-weight: bold;
+                        color: $mainWord_1;
 
                         p {
                             margin-top: 16px;
@@ -512,7 +489,7 @@
             margin: 15px auto;
             width: 77.6vw;
             height: 11.2vw;
-            @include buttonStyle_2;
+            @include mainBtn;
         }
     }
 
@@ -521,8 +498,8 @@
         width: 87.2vw;
         height: auto;
         padding-bottom: 8vw;
-        background: $backgroundColor_2;
-        border-radius: 1.5vw;
+        background: $mainBG_2;
+        border-radius: 5px;
         overflow: hidden;
         display: none;
 
@@ -534,7 +511,7 @@
             width: 100%;
             height: auto;
             display: flex;
-            border-bottom: solid 1px $borderColor_1;
+            border-bottom: solid 1px $mainBorder_1;
 
             li {
                 border-bottom: solid 2px transparent;
@@ -542,9 +519,11 @@
                 width: auto;
                 height: 14.4vw;
                 align-items: center;
+                color: $choose_Word;
 
                 &:active,&.active {
-                    border-color: $borderColor_3;
+                    color: $choose_ActiveWord;
+                    border-color: $choose_Border;
                 }
 
                 p {
@@ -554,8 +533,7 @@
                     font-size: 14px;
                     font-weight: bold;
                     letter-spacing: 1px;
-                    color: $font-color_14;
-                    border-right: solid 1px $borderColor_1;
+                    border-right: solid 1px $mainBorder_1;
                 }
             }
         }
@@ -573,7 +551,7 @@
 
             li {
                 padding: 0px 24px;
-                border-bottom: solid 1px $borderColor_1;
+                border-bottom: solid 1px $mainBorder_1;
                 width: 100%;
                 height: 50px;
                 box-sizing: border-box;
@@ -585,7 +563,7 @@
                 .date {
                     font-size: 12px;
                     letter-spacing: 1px;
-                    color: $font-color_1;
+                    color: $title_Time;
                     font-weight: bold;
                     flex-shrink: 0;
                 }
@@ -596,7 +574,7 @@
                     font-size: 14px;
                     font-weight: bold;
                     letter-spacing: 1px;
-                    color: $font-color_8;
+                    color: $mainWord_1;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
@@ -609,8 +587,8 @@
     .gameWindow {
         width: 91.94vw;
         height: auto;
-        background: $backgroundColor_2;
-        border-radius: 1.5vw;
+        background: $mainBG_2;
+        border-radius: 5px;
         overflow: hidden;
         padding-bottom: 8vw;
         display: none;
@@ -639,7 +617,7 @@
                         width: 19vw;
                         height: 35px;
                         margin-bottom: 5px;
-                        @include buttonStyle_3;
+                        @include noBgBtn_Normal;
                     }
                 }
 
@@ -649,7 +627,7 @@
                     button {
                         width: calc(100% - 20vw);
                         height: 11.2vw;
-                        @include buttonStyle_2;
+                        @include mainBtn;
                     }
                 }
 
@@ -658,7 +636,7 @@
                     font-size: 14px;
                     letter-spacing: 1px;
                     font-weight: bold;
-                    color: $font-color_14;
+                    color: $title_2;
                     white-space: nowrap;
                 }
 
@@ -666,19 +644,19 @@
                     font-size: 18px;
                     letter-spacing: 1px;
                     font-weight: bold;
-                    color: $font-color_14;
+                    color: $money;
                 }
 
                 input {
                     width: 59.2vw;
                     height: 9.86vw;
-                    @include inputStyle_1;
+                    @include mainInput;
                 }
             }
         }
         
         hr {
-            border: solid 1px $borderColor_1;
+            border: solid 1px $mainBorder_1;
         }
 
         .enterBtn {
@@ -686,7 +664,7 @@
             width: 77.33vw;
             height: 11.46vw;
             margin: 4.8vw auto 0;
-            @include buttonStyle_2;
+            @include mainBtn;
         }
     }
 
@@ -694,8 +672,8 @@
     .langWindow {
         width: 92vw;
         height: auto;
-        background: $backgroundColor_2;
-        border-radius: 1.5vw;
+        background: $mainBG_2;
+        border-radius: 5px;
         overflow: hidden;
         display: none;
 
@@ -717,8 +695,8 @@
                 width: 100%;
                 height: 9.87vw;
                 margin-bottom: 2.4vw;
-                @include buttonStyle_9;
-                color: $font-color_2;
+                @include changeBtn;
+                border-radius: 5px;
 
                 &:last-child {
                     margin: 0;
@@ -731,8 +709,8 @@
     .eventWindow {
         width: 92.27vw;
         height: auto;
-        background: $backgroundColor_2;
-        border-radius: 1.5vw;
+        background: $mainBG_2;
+        border-radius: 5px;
         overflow: hidden;
         display: none;
 
@@ -750,7 +728,7 @@
                 font-size: 14px;
                 letter-spacing: 1px;
                 font-weight: bold;
-                color: $font-color_6;
+                color: $mainWord_1;
                 line-height: 20px
             }
         }
@@ -764,7 +742,7 @@
             button {
                 width: 92%;
                 height: 40px;
-                @include buttonStyle_2;
+                @include mainBtn;
             }
         }
     }
@@ -773,8 +751,8 @@
     .passwordWindow {
         width: 92.27vw;
         height: auto;
-        background: $backgroundColor_2;
-        border-radius: 1.5vw;
+        background: $mainBG_2;
+        border-radius: 5px;
         overflow: hidden;
         display: none;
 
@@ -791,14 +769,14 @@
                 width: 77.6vw;
                 height: 9.87vw;
                 margin-top: 19px;
-                @include inputStyle_1;
+                @include mainInput;
             }
 
             button {
                 width: 77.6vw;
                 height: 9.87vw;
                 margin: 7.13vw 0 5vw;
-                @include buttonStyle_2;
+                @include mainBtn;
             }
         }
     }
@@ -807,8 +785,8 @@
     .checkPoint {
         width: 92.27vw;
         height: auto;
-        background: $backgroundColor_2;
-        border-radius: 1.5vw;
+        background: $mainBG_2;
+        border-radius: 5px;
         overflow: hidden;
         display: none;
 
@@ -825,7 +803,7 @@
             flex-direction: column;
 
             .smallTitle {
-                color: $font-color_12;
+                color: $title_2;
                 font-weight: bold;
                 font-size: 16px;
             }
@@ -833,7 +811,7 @@
             .point {
                 font-weight: bold;
                 font-size: 26px;
-                color: $font-color_3;
+                color: $money_Sp;
                 margin-top: 8px;
             }
         }
@@ -852,7 +830,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                border-bottom: solid 1px $borderColor_1;
+                border-bottom: solid 1px $mainBorder_1;
 
                 .name {
                     display: flex;
@@ -860,49 +838,39 @@
                     justify-content: center;
                     width: 30.4vw;
                     height: 6.13vw;
-                    border-right: solid 1px $borderColor_1;
+                    border-right: solid 1px $mainBorder_1;
                     font-size: 14px;
                     font-weight: bold;
-                    color: $font-color_12;
+                    color: $title_2;
                 }
 
                 .point {
                     font-size: 14px;
                     font-weight: bold;
-                    color: $font-color_12;
+                    color: $mainWord_1;
                     position: relative;
 
                     .info {
                         display: none;
                         position: absolute;
-                        width: 40vw;
+                        width: auto;
                         height: auto;
                         left: 0;
                         bottom: -38px;
                         z-index: 5;
-                        padding: 7px 0;
-                        border-radius: 3px;
                         align-items: center;
                         justify-content: center;
-                        background: $backgroundColor_1;
                         font-size: 12px;
                         letter-spacing: 1px;
-                        color: $font-color_5;
+                        @include walletInner;
 
                         &.display {
                             display: flex;
                         }
 
                         &::before {
-                            content: "";
-                            position: absolute;
                             top: -6px;
                             left: 10px;
-                            width: 0;
-                            height: 0;
-                            border-style: solid;
-                            border-width: 0 4px 6px 4px;
-                            border-color: $backgroundColor_1 transparent;
                         }
                     }
                 }
@@ -910,7 +878,7 @@
                 button {
                     width: 17.87vw;
                     height: 6.13vw;
-                    @include buttonStyle_2;
+                    @include mainBtn;
                     font-size: 12px;
                 }
             }
@@ -921,7 +889,7 @@
     .accWindow,.platWindow {
         width: 92.27vw;
         height: auto;
-        background: $backgroundColor_2;
+        background: $mainBG_2;
         border-radius: 1.5vw;
         overflow: hidden;
         display: none;
@@ -943,7 +911,7 @@
                 button {
                     width: 100%;
                     height: 38px;
-                    @include buttonStyle_9;
+                    @include changeBtn;
                     border-radius: 3px;
                 }
             }
@@ -953,12 +921,14 @@
                 height: auto;
                 margin-top: 10px;
                 font-size: 0;
+                display: flex;
+                flex-wrap: wrap;
 
                 button {
                     width: 32%;
                     height: 38px;
                     margin: 0 2% 2% 0;
-                    @include buttonStyle_9;
+                    @include changeBtn;
                     border-radius: 3px;
 
                     &:nth-of-type(3n) {
@@ -970,101 +940,101 @@
     }
 
     //注單明細
-    .bettingDetail {
-        width: 92.27vw;
-        height: calc(100vh - 60px);
-        background: $backgroundColor_2;
-        border-radius: 1.5vw;
-        overflow: hidden;
-        display: none;
+    // .bettingDetail {
+    //     width: 92.27vw;
+    //     height: calc(100vh - 60px);
+    //     background: $backgroundColor_2;
+    //     border-radius: 1.5vw;
+    //     overflow: hidden;
+    //     display: none;
 
-        &.display {
-            display: block;
-        }
+    //     &.display {
+    //         display: block;
+    //     }
 
-        .content {
-            width: 92%;
-            height: auto;
-            margin: 0 auto;
+    //     .content {
+    //         width: 92%;
+    //         height: auto;
+    //         margin: 0 auto;
 
-            .smallTitle {
-                width: 100%;
-                height: 36px;
-                display: flex;
-                align-items: center;
-                border-bottom: solid 1px $borderColor_3;
-                font-size: 15px;
-                font-weight: bold;
-                color: $font-color_12;
-                margin-bottom: 10px;
-            }
+    //         .smallTitle {
+    //             width: 100%;
+    //             height: 36px;
+    //             display: flex;
+    //             align-items: center;
+    //             border-bottom: solid 1px $borderColor_3;
+    //             font-size: 15px;
+    //             font-weight: bold;
+    //             color: $font-color_12;
+    //             margin-bottom: 10px;
+    //         }
 
-            .mainCnt {
-                width: 100%;
-                height: calc(100vh - 235px);
-                padding: 5px 5px 40px;
-                box-sizing: border-box;
-                background: $backgroundColor_4;
-                border-bottom: solid 1px $borderColor_2;
-                overflow-y: auto;
+    //         .mainCnt {
+    //             width: 100%;
+    //             height: calc(100vh - 235px);
+    //             padding: 5px 5px 40px;
+    //             box-sizing: border-box;
+    //             background: $backgroundColor_4;
+    //             border-bottom: solid 1px $borderColor_2;
+    //             overflow-y: auto;
 
-                .noData {
-                    width: 100%;
-                    height: 80px;
-                    display: none;
-                    align-items: center;
-                    justify-content: center;
-                    color: $font-color_1;
-                    font-weight: bold;
-                    font-size: 16px;
+    //             .noData {
+    //                 width: 100%;
+    //                 height: 80px;
+    //                 display: none;
+    //                 align-items: center;
+    //                 justify-content: center;
+    //                 color: $font-color_1;
+    //                 font-weight: bold;
+    //                 font-size: 16px;
 
-                    &.display {
-                        display: flex;
-                    }
-                }
-            }
+    //                 &.display {
+    //                     display: flex;
+    //                 }
+    //             }
+    //         }
 
-            .pageBox {
-                width: 100%;
-                padding-top: 15px;
-                box-sizing: border-box;
-                height: auto;
+    //         .pageBox {
+    //             width: 100%;
+    //             padding-top: 15px;
+    //             box-sizing: border-box;
+    //             height: auto;
 
-                .arrowBox {
-                    width: 100%;
-                    height: auto;
-                    display: flex;
-                    justify-content: center;
+    //             .arrowBox {
+    //                 width: 100%;
+    //                 height: auto;
+    //                 display: flex;
+    //                 justify-content: center;
 
-                    i {
-                        display: block;
-                        width: 12px;
-                        height: 12px;
+    //                 i {
+    //                     display: block;
+    //                     width: 12px;
+    //                     height: 12px;
 
-                        &.prev {
-                            transform: rotate(90deg);
-                            margin-right: 15px;
-                        }
+    //                     &.prev {
+    //                         transform: rotate(90deg);
+    //                         margin-right: 15px;
+    //                     }
 
-                        &.next {
-                            transform: rotate(-90deg);
-                            margin-left: 15px;
-                        }
-                    }
-                }
+    //                     &.next {
+    //                         transform: rotate(-90deg);
+    //                         margin-left: 15px;
+    //                     }
+    //                 }
+    //             }
 
-                p {
-                    font-size: 12px;
-                    margin-top: 10px;
-                    font-weight: bold;
-                    color: $font-color_1;
-                    text-align: center;
+    //             p {
+    //                 font-size: 12px;
+    //                 margin-top: 10px;
+    //                 font-weight: bold;
+    //                 color: $font-color_1;
+    //                 text-align: center;
 
-                    span {
-                        padding: 0 5px;
-                    }
-                }
-            }
-        }
-    }
+    //                 span {
+    //                     padding: 0 5px;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
